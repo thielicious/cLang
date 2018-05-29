@@ -119,7 +119,7 @@ public **cLang::check(string $default, string $lang)**
 * This will be widely used to make text available for both languages. Returns the content in the language that's currently set, otherwise it will pick default.<br>
 <br>
 
-**cLang::active()**
+public **cLang::active()**
 * Spits out the current cookie name otherwise FALSE (for active UX)<br>
 <br>
 
