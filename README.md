@@ -36,8 +36,8 @@ $clang = new cLang("language", "de", "en");
 (index.php) Create a small simple UX to make visitors able to click and change language of the website:
 ```
 <ul id=language>
-	<li><a id=de <?= $active("de").$default() ?> href=lang.php?lang=de title=Deutsch>DE</a></li>
-	<li><a id=en <?= $active("en") ?> href=lang.php?lang=en title=English>EN</a></li>
+	<li><a id=de <?= $clang->active("de", "class=active-lang", true) ?> href=lang.php?lang=de title=Deutsch>DE</a></li>
+	<li><a id=en <?= $clang->active("en", "class=active-lang") ?> href=lang.php?lang=en title=English>EN</a></li>
 </lu>
 ```
 
