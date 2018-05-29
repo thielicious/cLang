@@ -6,7 +6,7 @@
 
 ## INTRODUCTION
 
-**cLang** ('c' abbr. for 'change') is a small API which you can use for cheap multilingual websites. Optimal for OnePages.
+**cLang** ('c' abbr. for 'change') is a small API which you can use for cheap multilingual websites. It's using cookies and optimal for OnePages. No additional frameworks necessary, PHP 7.0.0+ required.
 
 <br>
 
