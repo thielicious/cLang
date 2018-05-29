@@ -80,7 +80,7 @@ $default = function() use ($clang) {
 include "inc.php";
 if (isset($_GET["lang"])) {
 	if ($_GET["lang"] == $clang->get("default") || $clang->get("language")) {
-    	$clang->switch($_GET["lang"]);
+    		$clang->switch($_GET["lang"]);
 	}
 }
 header("Location: ".$_SERVER["HTTP_REFERER"]);
