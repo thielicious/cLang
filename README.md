@@ -85,9 +85,9 @@ public **cLang::reset()**
 * Remove the cookie and the default language will be used upon page refresh.<br>
 <br>
 
-public **cLang::get(string $what)**
+public **cLang::get(string $param)**
 * Return cookie name or language by using one of the following strings<br>
-`"name", "default", "language"`<br>
+`"name"`, `"default"`, `"language"`<br>
 <br>
 
 private **cLang::cookie(string $value)**
@@ -101,6 +101,7 @@ public **cLang::check(string $default, string $lang)**
 public **cLang::active(string $lang, string $style, $default = null)**
 * Apply a CSS style to the active UX.<br>
 Example:  `$clang->active("de", "class=active-lang", true)`<br>
+Use `true` as 3rd parameter if you would like to set the language as dafault.
 <br>
 
 <br>
