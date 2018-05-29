@@ -101,7 +101,7 @@ public **cLang::check(string $default, string $lang)**
 public **cLang::active(string $lang, string $style, $default = null)**
 * Apply a CSS style to the active UX.<br>
 Example:  `$clang->active("de", "class=active-lang", true)`<br>
-Use `true` as 3rd parameter if you would like to set the language as dafault.
+Use `true` as 3rd parameter if you would like to set the language as default.
 <br>
 
 <br>
