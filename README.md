@@ -19,7 +19,8 @@ Use your CLI and enter the following to clone:<br>
 
 ## USAGE (Example)
 
-(inc.php) Create an object:
+(inc.php) Create an object:<br>
+Parameters: cookie name, default language and alternative language<br>
 ```
 require "cLang.class.php";
 $clang = new cLang("language", "de", "en");
