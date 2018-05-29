@@ -51,7 +51,7 @@ $default = function() use ($clang) {
 </lu>
 ```
 
-(index.php) Create a menu for subsites:
+(index.php) Create a menu for subsites in both languages:
 ```
 <ul id=menu>
 	<li><a href=index.php><?= $clang->check("NEUIGKEITEN","NEWS") ?></a></li> | 
@@ -60,7 +60,7 @@ $default = function() use ($clang) {
 </ul>
 ```
 
-(index.php) Inside of the content on every page write some text in **both** languages by using the method `::check()`:
+(index.php) Inside of the content on every page write some text in both languages:
 ```
 <section>
 	<?php
@@ -75,7 +75,7 @@ $default = function() use ($clang) {
 </section>
 ```
 
-(lang.php) Now use the following PRG pattern to handle a `$_GET` request:
+(lang.php) Now use the following PRG pattern to handle a `$_GET` request when someone chooses a language:
 ```
 include "inc.php";
 if (isset($_GET["lang"])) {
@@ -90,36 +90,37 @@ header("Location: ".$_SERVER["HTTP_REFERER"]);
 
 ## METHODS (Still under construction)
 
-**cLang::__construct(string $name, string $default, string $lang)**
+public **cLang::__construct(string $name, string $default, string $lang)**
 * Choose a cookie name, a default language and another one that is supposed to be selected.<br>
 <br>
 
-**cLang::error()**
-* Lorem ipsum dolor sit amet.<br>
+private **cLang::error(string $msg)**
+* Custom error message if needed.<br>
 <br>
 
-**cLang::switch()**
-* Lorem ipsum dolor sit amet.<br>
+public **cLang::switch(string $lang)**
+* This will switch to the selected language by re/placing its cookie.<br>
 <br>
 
-**cLang::reset()**
-* Lorem ipsum dolor sit amet.<br>
+public **cLang::reset()**
+* Remove the cookie and the default language will be used upon page refresh.<br>
 <br>
 
-**cLang::get()**
-* Lorem ipsum dolor sit amet.<br>
+public **cLang::get(string $what)**
+* Return cookie name or language by using one of the following strings<br>
+`"name", "default", "language"`<br>
 <br>
 
-**cLang::cookie()**
-* Lorem ipsum dolor sit amet.<br>
+private **cLang::cookie(string $value)**
+* Look up if a specified value exists. (booloean output)<br>
 <br>
 
-**cLang::check()**
-* Lorem ipsum dolor sit amet.<br>
+public **cLang::check(string $default, string $lang)**
+* This will be widely used to make text available for both languages. Returns the content in the language that's currently set, otherwise it will pick default.<br>
 <br>
 
 **cLang::active()**
-* Lorem ipsum dolor sit amet.<br>
+* Spits out the current cookie name otherwise FALSE (for active UX)<br>
 <br>
 
 <br>
