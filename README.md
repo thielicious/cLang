@@ -65,14 +65,11 @@ $default = function() use ($clang) {
 <section>
 	<?php
 		if (!count($_GET)) {
-			echo "<h2>".$clang->check("Willkommen!","Welcome")."</h2>
-				<p>".$clang->check("Ein paar Neuigkeiten","Some news here").".</p>";
+			echo "<h2>".$clang->check("Willkommen!","Welcome")."</h2>";
 		} elseif (isset($_GET["about"])) {
-			echo "<h2>".$clang->check("Über Uns","About Us")."</h2>
-				<p>".$clang->check("Etwas Text über uns","Some text about us").".</p>";
+			echo "<h2>".$clang->check("Über Uns","About Us")."</h2>";
 		} elseif (isset($_GET["contact"])) {
-			echo "<h2>".$clang->check("Kontakt","Contact")."</h2>
-				<p>".$clang->check("Kontaktinformationen hier","Contact information here").".</p>";
+			echo "<h2>".$clang->check("Kontakt","Contact")."</h2>";
 		}
 	?>
 </section>
@@ -129,7 +126,7 @@ header("Location: ".$_SERVER["HTTP_REFERER"]);
 <br>
 A demo is subjected to be added in near future.
 
-###### If you encounter any bugs, feel free to open up an **[issue](https://github.com/thielicious/Logger/issues)**, thank you.
+###### If you encounter any bugs, feel free to open up an **[issue](https://github.com/thielicious/cLang/issues)**, thank you.
 
 ---
 **[thielicious.github.io](http://thielicious.github.io)**
