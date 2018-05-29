@@ -50,8 +50,8 @@
             }
         }
 
-        // look up if the cookie contains a specific value (bool)
-    	private function cookie($value) {
+        // look up if the cookie contains a specific language (bool)
+    	private function isLang($value) {
     		if (isset($this->name)) {
 		    	if (isset($_COOKIE[$this->name])) {
 		    		if ($_COOKIE[$this->name] == $value) {
@@ -70,7 +70,7 @@
         // return the content in the currently set language
     	public function check(string $default, string $lang) {
     		if (isset($this->name)) {
-	    		return $this->cookie($this->lang) ? $lang : $default;
+	    		return $this->isLang($this->lang) ? $lang : $default;
 	    	} else {
 	    		static::error("Cookie name and default language not set.");
 	    	}
