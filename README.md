@@ -75,10 +75,6 @@ public **cLang::__construct(string $name, string $default, string $lang)**
 * Choose a cookie name, a default language and another one that is supposed to be selected.<br>
 <br>
 
-private **cLang::error(string $msg)**
-* Custom error message if needed.<br>
-<br>
-
 public **cLang::switch(string $lang)**
 * This will switch to the selected language by re/placing its cookie.<br>
 <br>
@@ -90,10 +86,6 @@ public **cLang::reset()**
 public **cLang::get(string $param)**
 * Return cookie name or language by using one of the following strings<br>
 `"name"`, `"default"`, `"language"`<br>
-<br>
-
-private **cLang::cookie(string $value)**
-* Look up if a specified value exists. (booloean output)<br>
 <br>
 
 public **cLang::check(string $default, string $lang)**
