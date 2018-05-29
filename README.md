@@ -28,6 +28,7 @@ $clang = new cLang("language", "de", "en");
 
 (index.php) Create a menu for subsites in both languages:
 ```
+<?php include "inc.php"; ?>
 <ul id=menu>
 	<li><a href=index.php><?= $clang->check("NEUIGKEITEN","NEWS") ?></a></li> | 
 	<li><a href=?contact><?= $clang->check("KONTAKT", "CONTACT") ?></a></li>
