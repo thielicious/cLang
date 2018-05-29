@@ -50,7 +50,7 @@
             }
         }
 
-        // look up if a specified value exists
+        // look up if the cookie contains a specific value (bool)
     	private function cookie($value) {
     		if (isset($this->name)) {
 		    	if (isset($_COOKIE[$this->name])) {
@@ -67,7 +67,7 @@
 	    	}
 	    }
 
-        // check which language is currently set in the cookie
+        // check the language and return the correct content
     	public function check(string $default, string $lang) {
     		if (isset($this->name)) {
 	    		return $this->cookie($this->lang) ? $lang : $default;
@@ -76,7 +76,7 @@
 	    	}
     	}
 
-        // return cookie if it exists otherwise false (for active stylesheets)
+        // return cookie if it exists otherwise false (for active UX)
         public function active() {
             if (isset($_COOKIE[$this->name])) {
                 return $_COOKIE[$this->name];
