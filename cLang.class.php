@@ -1,4 +1,4 @@
-<?php // cLang v1.0 | (c) Thielicious | thielicious.github.io
+<?php // cLang v1.0 | (c) 2018 Thielicious | thielicious.github.io
 
     class cLang {
 
