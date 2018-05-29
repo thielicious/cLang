@@ -100,7 +100,7 @@ public **cLang::check(string $default, string $lang)**
 
 public **cLang::active(string $lang, string $style, $default = null)**
 * Apply a CSS style to the active UX.<br>
-Example:  $clang->active("de", "class=active-lang", true)<br>
+Example:  `$clang->active("de", "class=active-lang", true)`<br>
 <br>
 
 <br>
