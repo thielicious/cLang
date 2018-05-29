@@ -43,7 +43,7 @@ $default = function() use ($clang) {
 };
 ```
 
-(index.php) Create a small simple UX to make visitors able to click and change language of the website using simple HTML & CSS:
+(index.php) Create a small simple UX to make visitors able to click and change language of the website:
 ```
 <ul id=language>
 	<li><a id=de <?= $active("de").$default() ?> href=lang.php?lang=de title=Deutsch>DE</a></li>
@@ -51,7 +51,7 @@ $default = function() use ($clang) {
 </lu>
 ```
 
-(index.php) Create a simple menu for subsites:
+(index.php) Create a menu for subsites:
 ```
 <ul id=menu>
 	<li><a href=index.php><?= $clang->check("NEUIGKEITEN","NEWS") ?></a></li> | 
