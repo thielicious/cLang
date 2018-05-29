@@ -25,22 +25,12 @@ require "cLang.class.php";
 $clang = new cLang("language", "de", "en");
 ```
 
-(index.php) Declare a closure in PHP to check the **active** language. It will be highlighted using a CSS class (only an example):
+(index.php) Create a menu for subsites in both languages:
 ```
-$active = function($lang) use ($clang) {
-	if ($clang->active() == $lang) {
-		return "class=active-lang";
-	}
-};
-```
-
-(index.php) Declare a closure that defines the **default** language upon visiting the website for first time:
-```
-$default = function() use ($clang) {
-	if (!$clang->active()) {
-		return "class=active-lang";
-	}
-};
+<ul id=menu>
+	<li><a href=index.php><?= $clang->check("NEUIGKEITEN","NEWS") ?></a></li> | 
+	<li><a href=?contact><?= $clang->check("KONTAKT", "CONTACT") ?></a></li>
+</ul>
 ```
 
 (index.php) Create a small simple UX to make visitors able to click and change language of the website:
@@ -51,23 +41,12 @@ $default = function() use ($clang) {
 </lu>
 ```
 
-(index.php) Create a menu for subsites in both languages:
+(index.php) Write some text in both languages inside of the content on every page:
 ```
-<ul id=menu>
-	<li><a href=index.php><?= $clang->check("NEUIGKEITEN","NEWS") ?></a></li> | 
-	<li><a href=?about><?= $clang->check("ÜBER UNS", "ABOUT US") ?></a></li> | 
-	<li><a href=?contact><?= $clang->check("KONTAKT", "CONTACT") ?></a></li>
-</ul>
-```
-
-(index.php) Inside of the content on every page write some text in both languages:
-```
-<section>
+<section id=content>
 	<?php
 		if (!count($_GET)) {
 			echo "<h2>".$clang->check("Willkommen!","Welcome")."</h2>";
-		} elseif (isset($_GET["about"])) {
-			echo "<h2>".$clang->check("Über Uns","About Us")."</h2>";
 		} elseif (isset($_GET["contact"])) {
 			echo "<h2>".$clang->check("Kontakt","Contact")."</h2>";
 		}
@@ -88,7 +67,7 @@ header("Location: ".$_SERVER["HTTP_REFERER"]);
 
 <br>
 
-## METHODS (Still under construction)
+## METHODS
 
 public **cLang::__construct(string $name, string $default, string $lang)**
 * Choose a cookie name, a default language and another one that is supposed to be selected.<br>
@@ -119,8 +98,9 @@ public **cLang::check(string $default, string $lang)**
 * This will be widely used to make text available for both languages. Returns the content in the language that's currently set, otherwise it will pick default.<br>
 <br>
 
-public **cLang::active()**
-* Spits out the current cookie name otherwise FALSE (for active UX)<br>
+public **cLang::active(string $lang, string $style, $default = null)**
+* Apply a CSS style to the active UX.<br>
+Example:  $clang->active("de", "class=active-lang", true)<br>
 <br>
 
 <br>
