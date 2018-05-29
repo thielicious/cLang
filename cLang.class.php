@@ -67,7 +67,7 @@
 	    	}
 	    }
 
-        // check the language and return the correct content
+        // return the content in the currently set language
     	public function check(string $default, string $lang) {
     		if (isset($this->name)) {
 	    		return $this->cookie($this->lang) ? $lang : $default;
@@ -76,12 +76,14 @@
 	    	}
     	}
 
-        // return cookie if it exists otherwise false (for active UX)
-        public function active() {
+        // apply active CSS style
+        public function active(string $lang, string $style, string $default = null) {
             if (isset($_COOKIE[$this->name])) {
-                return $_COOKIE[$this->name];
-            } else {
-                return false;
+                if ($_COOKIE[$this->name] == $lang ) {
+                    return $style;
+                }
+            } elseif ($default == true) {
+                return $style;
             }
         }
 
