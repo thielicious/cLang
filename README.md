@@ -98,9 +98,10 @@ Example:  `$clang->active("de", "class=active-lang", true)`<br>
 Use `true` as 3rd parameter if you would like to set the language as default.
 <br>
 
+:new: A **[Demo](https://jsfiddle.net/Thielicious/4oxmsy49/)** has been added.
+
 <br>
 <br>
-A demo is subjected to be added in near future.
 
 ###### If you encounter any bugs, feel free to open up an **[issue](https://github.com/thielicious/cLang/issues)**, thank you.
 
