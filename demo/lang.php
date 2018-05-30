@@ -1,10 +1,10 @@
-<?php // (PRG) change language
+<?php // lang.php (PRG)
 
 	include "inc.php";
 
 	if (isset($_GET["lang"])) {
 		if ($_GET["lang"] == $clang->get("default") || $clang->get("language")) {
-	    	$clang->switch($_GET["lang"]);
+	    		$clang->switch($_GET["lang"]);
 		}
 	}
 
