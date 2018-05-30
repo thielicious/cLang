@@ -89,7 +89,7 @@ header("Location: ".$_SERVER["HTTP_REFERER"]);
 <br>
 
 **cLang::check(string $default, string $lang)**
-* This will be widely used to make text available for both languages. Returns the content in the language that's currently set, otherwise it will pick default.<br>
+* Return the content in the language that's currently set, otherwise it will pick default.<br>
 <br>
 
 **cLang::active(string $lang, string $style, $default = null)**
