@@ -97,8 +97,9 @@ header("Location: ".$_SERVER["HTTP_REFERER"]);
 Example:  `$clang->active("de", "class=active-lang", true)`<br>
 Use `true` as 3rd parameter if you would like to set the language as default.
 <br>
+<br>
 
-:new: A **[Demo](https://jsfiddle.net/Thielicious/4oxmsy49/)** has been added.
+:new: A **[Demo](https://github.com/thielicious/cLang/demo/)** has been added.
 
 <br>
 <br>
