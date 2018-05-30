@@ -99,7 +99,7 @@ Use `true` as 3rd parameter if you would like to set the language as default.
 <br>
 <br>
 
-:new: A **[Demo](https://github.com/thielicious/cLang/demo/)** has been added.
+:new: A **[Demo](https://github.com/thielicious/cLang/tree/master/demo)** has been added.
 
 <br>
 <br>
