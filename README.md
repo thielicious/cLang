@@ -23,7 +23,7 @@ Use your CLI and enter the following to clone:<br>
 Parameters: cookie name, default language and alternative language<br>
 ```
 require "cLang.class.php";
-$clang = new cLang("language", "de", "en");
+$clang = new cLang("language-cookie", "de", "en");
 ```
 
 (index.php) Create a menu for subsites in both languages:
@@ -71,28 +71,28 @@ header("Location: ".$_SERVER["HTTP_REFERER"]);
 
 ## METHODS
 
-public **cLang::__construct(string $name, string $default, string $lang)**
+**cLang::__construct(string $name, string $default, string $lang)**
 * Choose a cookie name, a default language and another one that is supposed to be selected.<br>
 <br>
 
-public **cLang::switch(string $lang)**
+**cLang::switch(string $lang)**
 * This will switch to the selected language by re/placing its cookie.<br>
 <br>
 
-public **cLang::reset()**
+**cLang::reset()**
 * Remove the cookie and the default language will be used upon page refresh.<br>
 <br>
 
-public **cLang::get(string $param)**
+**cLang::get(string $param)**
 * Return cookie name or language by using one of the following strings<br>
 `"name"`, `"default"`, `"language"`<br>
 <br>
 
-public **cLang::check(string $default, string $lang)**
+**cLang::check(string $default, string $lang)**
 * This will be widely used to make text available for both languages. Returns the content in the language that's currently set, otherwise it will pick default.<br>
 <br>
 
-public **cLang::active(string $lang, string $style, $default = null)**
+**cLang::active(string $lang, string $style, $default = null)**
 * Apply a CSS style to the active UX.<br>
 Example:  `$clang->active("de", "class=active-lang", true)`<br>
 Use `true` as 3rd parameter if you would like to set the language as default.
