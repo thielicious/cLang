@@ -23,7 +23,7 @@
 					<ul id=lang>
 						<li><a id=de <?= $clang->active("de", "class=active-lang", true) ?> href=lang.php?lang=de title=Deutsch>DE</a></li>
 						<li><a id=en <?= $clang->active("en", "class=active-lang") ?> href=lang.php?lang=en title=English>EN</a></li>
-					</lu>
+					</ul>
 				</nav>
 			</header>
 			<section>
